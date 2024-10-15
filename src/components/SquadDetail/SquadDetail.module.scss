@@ -1,0 +1,85 @@
+.squadDetail {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	border-radius: 20px 20px 0 0;
+	padding: 16px 16px 32px 16px;
+	background: #2b2c2b;
+
+	.subtitle {
+		margin-bottom: 8px;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 136%;
+		text-align: center;
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	.title {
+		margin-bottom: 20px;
+		font-weight: 600;
+		font-size: 24px;
+		text-align: center;
+	}
+
+	&__text {
+		display: flex;
+		gap: 16px;
+		margin-bottom: 32px;
+	}
+
+	&__place {
+		font-weight: 500;
+		font-size: 12px;
+		color: rgba(255, 255, 255, 0.5);
+
+		& > span {
+			color: #fff;
+		}
+	}
+
+	&__moons {
+		display: flex;
+		align-items: center;
+		gap: 2px;
+		font-weight: 500;
+		font-size: 12px;
+		color: rgba(255, 255, 255, 0.5);
+
+		& > span {
+			color: #fff;
+		}
+	}
+
+	.actions {
+		display: grid;
+		grid-template-columns: 1fr max-content;
+		grid-template-rows: 48px;
+		gap: 8px;
+		width: 100%;
+
+		&__invite {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 4px;
+			padding: 0px 18px;
+			background: #fff;
+			color: #242424;
+			border-radius: 12px;
+
+			& > span {
+				font-weight: 600;
+				text-transform: lowercase;
+				text-align: center;
+			}
+		}
+
+		&__copy {
+			width: 48px;
+			padding: 0;
+			background: rgba(255, 255, 255, 0.2);
+		}
+	}
+}

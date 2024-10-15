@@ -1,0 +1,40 @@
+.connectWalletModal {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	border-radius: 20px 20px 0 0;
+	padding: 16px 16px 32px 16px;
+	background: #2b2c2b;
+
+	.close {
+		align-self: flex-end;
+		width: 24px;
+		height: 24px;
+		margin-bottom: 12px;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 8px;
+	}
+
+	.icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 80px;
+		height: 80px;
+		margin-bottom: 20px;
+		background: rgba(255, 255, 255, 0.12);
+		border-radius: 20px;
+	}
+
+	.title {
+		width: 60%;
+		margin-bottom: 32px;
+		font-weight: 600;
+		font-size: 20px;
+		text-align: center;
+	}
+	.button {
+		text-transform: lowercase;
+	}
+}

@@ -1,0 +1,33 @@
+.footer {
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 6px;
+	z-index: 10;
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 4px;
+		height: 64px;
+		background: rgba(255, 255, 255, 0.08);
+		border-radius: 12px;
+		overflow: hidden;
+		transition: background 0.2s linear;
+
+		&.active {
+			background: rgba(255, 255, 255, 0.16);
+		}
+
+		& > span {
+			font-weight: 500;
+			font-size: 12px;
+			text-align: center;
+		}
+	}
+}

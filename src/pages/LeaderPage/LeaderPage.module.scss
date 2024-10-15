@@ -1,0 +1,83 @@
+.leaderPage {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	padding-bottom: 32px;
+	.cards {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		.card {
+			position: relative;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			border-radius: 16px;
+			padding: 16px 16px 16px 12px;
+			background: rgba(255, 255, 255, 0.05);
+			&:nth-child(1) {
+				background: rgba(255, 168, 0, 0.1);
+				border: 1px solid #ffb005;
+				.card__nick {
+					background: linear-gradient(90deg, #ff710a 0%, #fff500 100%);
+					background-clip: text;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+			}
+			&:nth-child(2) {
+				background: rgba(192, 206, 215, 0.1);
+				border: 1px solid #a1bde3;
+				.card__nick {
+					background: linear-gradient(90deg, #d5e3ff 0%, #6d96c7 100%);
+					background-clip: text;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+			}
+			&:nth-child(3) {
+				background: rgba(188, 63, 9, 0.1);
+				border: 1px solid #c96a44;
+				.card__nick {
+					background: linear-gradient(90deg, #a44935 0%, #f18d55 100%);
+					background-clip: text;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+			}
+			&__place {
+				width: 32px;
+				font-weight: 600;
+				font-size: 12px;
+			}
+			&__info {
+				display: flex;
+				flex: 1;
+				align-items: center;
+				gap: 8px;
+			}
+			&__avatar {
+				border-radius: 38px;
+				width: 28px;
+				height: 28px;
+			}
+			&__nick {
+				font-weight: 500;
+				font-size: 12px;
+				overflow: hidden;
+				word-break: break-all;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
+			}
+			&__coin {
+				display: flex;
+				align-items: center;
+				font-weight: 600;
+				font-size: 14px;
+				gap: 4px;
+			}
+		}
+	}
+}

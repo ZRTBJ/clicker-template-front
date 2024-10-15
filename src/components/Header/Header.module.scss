@@ -1,0 +1,30 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	z-index: 10;
+
+	&__user {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	&__avatar {
+		width: 32px;
+		height: 32px;
+		border-radius: 38px;
+		overflow: hidden;
+	}
+
+	&__nickname {
+		font-weight: 600;
+		font-size: 14px;
+	}
+
+	&__button {
+		width: max-content;
+		height: 40px;
+	}
+}

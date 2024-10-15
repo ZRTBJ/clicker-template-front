@@ -1,0 +1,160 @@
+.squadsPage {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	padding-bottom: 58px;
+
+	&__middle {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+
+		.squadEmpty {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 80px;
+			padding: 16px;
+			font-weight: 600;
+			font-size: 12px;
+			color: rgba(255, 255, 255, 0.5);
+			background: rgba(255, 255, 255, 0.05);
+			border-radius: 20px;
+		}
+
+		.squadInfo {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+			height: 100px;
+			background: rgba(255, 255, 255, 0.05);
+			border-radius: 20px;
+			overflow: hidden;
+
+			&__title {
+				font-weight: 600;
+				font-size: 20px;
+			}
+
+			&__text {
+				display: flex;
+				gap: 16px;
+			}
+
+			&__place {
+				font-weight: 500;
+				font-size: 12px;
+				color: rgba(255, 255, 255, 0.5);
+
+				& > span {
+					color: #fff;
+				}
+			}
+
+			&__coins {
+				display: flex;
+				align-items: center;
+				gap: 2px;
+				font-weight: 500;
+				font-size: 12px;
+				color: rgba(255, 255, 255, 0.5);
+
+				& > span {
+					color: #fff;
+				}
+			}
+		}
+
+		.createButton {
+			color: #242424;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+
+		.title {
+			font-weight: 700;
+			font-size: 24px;
+			letter-spacing: -0.01em;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		.list {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+			width: 100%;
+
+			.elem {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				height: 60px;
+				border-radius: 16px;
+				padding: 14px 12px;
+				background: rgba(255, 255, 255, 0.05);
+
+				&__place {
+					width: 32px;
+					font-weight: 600;
+					font-size: 12px;
+				}
+
+				&__center {
+					display: flex;
+					align-items: center;
+					flex: 1;
+					gap: 8px;
+				}
+
+				&__image {
+					width: 28px;
+					height: 28px;
+					border-radius: 38px;
+					overflow: hidden;
+				}
+
+				.user {
+					display: flex;
+					flex-direction: column;
+					flex: 1;
+					gap: 2px;
+
+					&__nickname {
+						font-weight: 500;
+						font-size: 12px;
+						overflow: hidden;
+						word-break: break-all;
+						text-overflow: ellipsis;
+						display: -webkit-box;
+						-webkit-line-clamp: 1;
+						-webkit-box-orient: vertical;
+					}
+
+					&__totalCoin {
+						display: flex;
+						align-items: center;
+						gap: 2px;
+						font-weight: 600;
+						font-size: 9px;
+					}
+				}
+
+				.button {
+					width: 60px;
+					height: 32px;
+					padding: 0;
+					font-size: 13px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+.earnDetail {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	border-radius: 20px 20px 0 0;
+	padding: 16px 16px 32px 16px;
+	background: #2b2c2b;
+
+	.image {
+		width: 80px;
+		height: 80px;
+		margin-bottom: 12px;
+		border-radius: 20px;
+		padding: 10px;
+		background: rgba(255, 255, 255, 0.12);
+		overflow: hidden;
+	}
+
+	.title {
+		margin-bottom: 12px;
+		font-weight: 600;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.text {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		margin-bottom: 32px;
+		font-weight: 700;
+		font-size: 44px;
+	}
+}
