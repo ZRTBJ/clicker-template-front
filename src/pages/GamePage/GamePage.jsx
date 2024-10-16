@@ -77,6 +77,23 @@ export default function GamePage() {
 		return () => clearInterval(interval);
 	}, [energy, maxEnergy, dispatch]);
 
+	useEffect(() => {
+		const handleUnload = () => {
+		  console.log('Выполнение логики перед выходом');
+		  if (tapCount.current > 0) {
+			makeTaps('', id, tapCount.current).then((json) => {
+				tapCount.current = 0;
+			});
+		}
+		};
+	  
+		window.addEventListener('unload', handleUnload);
+	  
+		return () => {
+		  window.removeEventListener('unload', handleUnload);
+		};
+	  }, [tapCount]);
+
 	return (
 		<section className={s.gamePage} onTouchEnd={(e) => e.preventDefault()}>
 			<div className={s.info}>
