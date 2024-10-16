@@ -15,6 +15,7 @@ import { setIsBuySkinModal } from '../../store/slices/modalsSlice';
 
 import s from './BoostPage.module.scss';
 import classNames from 'classnames';
+import { buyBooster } from '../../api/buyBooster';
 export default function BoostPage() {
 	const dispatch = useDispatch();
 	
@@ -33,9 +34,9 @@ export default function BoostPage() {
 		tapbotlevel,])
 	const handleBuy = (elem) => {
 		var price =  elem.titleForApi == 'multitap'
-				? elem.price* ( multitaplevel + 1)
+				? elem.price* Math.pow(2, multitaplevel)
 				: elem.titleForApi == 'maxenergy'
-				? elem.price* (maxenergylevel + 1)
+				? elem.price* Math.pow(2,maxenergylevel )
 				: elem.titleForApi == 'tapbot' && tapbotlevel == 0 && 1;
 
 		if (balance >= price) {
@@ -103,9 +104,9 @@ export default function BoostPage() {
 						>
 								<StarsIcon width={16} height={16} /> 
 							{elem.titleForApi == 'multitap'
-								? elem.price * ( multitaplevel + 1)
+								? elem.price * Math.pow(2, multitaplevel)
 								: elem.titleForApi == 'maxenergy'
-								? elem.price * (maxenergylevel + 1 )
+								? elem.price * Math.pow(2,maxenergylevel )
 								: elem.titleForApi == 'tapbot' && tapbotlevel == 0
 								? elem.price
 								: 'ALREADY WORKS'}
