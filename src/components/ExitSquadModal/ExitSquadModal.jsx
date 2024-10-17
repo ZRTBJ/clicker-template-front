@@ -6,8 +6,8 @@ import Button from '../UI/Button/Button';
 function ExitSquadModal({ handleConfirm, isOpen, onClose, name }) {
 	return (
 		<Modal isOpen={isOpen} className={s.exitSquadModal}>
-			<h2 className={s.title}>You are the leaders of the squad</h2>
-			<p className={s.text}> Do you want to remove you squad?</p>
+			<h2 className={s.title}>You are the leader of the squad</h2>
+			<p className={s.text}> Do you want to remove you from squad?</p>
 			<div className={s.actions}>
 				<Button
 					variant="filled"

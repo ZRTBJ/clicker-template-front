@@ -12,6 +12,10 @@ export default function LeaderPage() {
 	function findUserIndexById(usersLeaders, targetId) {
 		return usersLeaders.findIndex(user => user.id === targetId);
 	}
+	function formatNumber(num) {
+		return num.toLocaleString('de-DE'); // Используем 'de-DE' для разделителей точкой
+	  }
+
 	return (
 		<section className={s.leaderPage}>
 			<PageTitle title={'leaderboard'} subtitle={findUserIndexById(usersLeaders, user.tgId)!=-1 ? `You are #${findUserIndexById(usersLeaders, user.tgId)+1}` : "You are not in board("}  />
@@ -28,7 +32,7 @@ export default function LeaderPage() {
 							<p className={s.card__nick}>{elem.nick}</p>
 						</div>
 						<div className={s.card__coin}>
-							{elem.coin} <SkinsIcon width={14} height={14} />
+							{formatNumber(elem.coin)} <SkinsIcon width={14} height={14} />
 						</div>
 					</div>
 				))}

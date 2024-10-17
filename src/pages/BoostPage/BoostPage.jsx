@@ -16,6 +16,7 @@ import { setIsBuySkinModal } from '../../store/slices/modalsSlice';
 import s from './BoostPage.module.scss';
 import classNames from 'classnames';
 import { buyBooster } from '../../api/buyBooster';
+import { formatCoinLeader } from '../../utils/formatText';
 export default function BoostPage() {
 	const dispatch = useDispatch();
 	
@@ -100,16 +101,24 @@ export default function BoostPage() {
 									? () => {}
 									: () => handleBuy(elem)
 							}
-							disabled={elem.titleForApi === 'tapbot' && tapbotlevel != 0}
+							disabled={
+								(elem.titleForApi === 'tapbot' && tapbotlevel != 0) ||
+								(elem.titleForApi == 'maxenergy' && maxenergylevel >= 14) ||
+								(elem.titleForApi == 'multitap' && multitaplevel >= 15)
+							}
 						>
 								<StarsIcon width={16} height={16} /> 
-							{elem.titleForApi == 'multitap'
-								? elem.price * Math.pow(2, multitaplevel)
-								: elem.titleForApi == 'maxenergy'
-								? elem.price * Math.pow(2,maxenergylevel )
-								: elem.titleForApi == 'tapbot' && tapbotlevel == 0
-								? elem.price
-								: 'ALREADY WORKS'}
+								{
+							
+							
+							
+							elem.titleForApi == 'multitap' 
+								?(multitaplevel < 15 ? formatCoinLeader(elem.price * Math.pow(2, multitaplevel)) : 'MAX')
+								: elem.titleForApi == 'maxenergy' 
+								?(maxenergylevel < 14 ?  formatCoinLeader(elem.price * Math.pow(2, maxenergylevel)) : 'MAX')
+								: elem.titleForApi == 'tapbot' &&
+								(tapbotlevel ==0 ?  formatCoinLeader(elem.price * Math.pow(2, tapbotlevel)) : 'WORK')
+							}
 						</Button>
 						</div>
 					))}

@@ -9,10 +9,16 @@ import GamePage from './pages/GamePage';
 import LeaderPage from './pages/LeaderPage';
 import SquadsPage from './pages/SquadsPage';
 import SquadDetail from './components/SquadDetail';
+import { Users } from './pages/Users/Users';
+import { Leaderboard } from './pages/Leaderboard/Leaderboard';
+import { Tasks } from './pages/Tasks/Tasks';
 
 export default function Router() {
 	return (
 		<Routes>
+			<Route path="/users" element={<Users />} />
+			<Route path="/leaderboard" element={<Leaderboard />} />
+			<Route path="/tasks" element={<Tasks />} />
 			<Route path='/' element={<Layout />}>
 				<Route index element={<GamePage />} />
 				

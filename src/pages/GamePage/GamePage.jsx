@@ -94,6 +94,11 @@ export default function GamePage() {
 		};
 	  }, [tapCount]);
 
+	  function formatNumber(num) {
+		return num.toLocaleString('de-DE'); // Используем 'de-DE' для разделителей точкой
+	  }
+
+
 	return (
 		<section className={s.gamePage} onTouchEnd={(e) => e.preventDefault()}>
 			<div className={s.info}>
@@ -101,7 +106,7 @@ export default function GamePage() {
 					<p className={s.subtitle}>Coin balance</p>
 					<div className={s.balance}>
 						<SkinsIcon width={36} height={36} isActive />
-						<p className={s.coin}>{balance}</p>
+						<p className={s.coin}>{formatNumber(balance)}</p>
 					</div>
 				</div>
 				<div
