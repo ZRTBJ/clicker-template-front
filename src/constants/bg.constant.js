@@ -5,4 +5,4 @@ import bg4 from '../assets/images/bg4.webp';
 
 export const BGLIST = [bg1, bg2, bg3, bg4];
 
-export const socket = new WebSocket('ws://127.0.0.1:8000/ws')
+export const socket = new WebSocket('wss://apiclicker.akzystudio.com/ws')
