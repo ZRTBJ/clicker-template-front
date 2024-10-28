@@ -7,7 +7,7 @@ export default function Qr() {
 			<QrIcons />
 			<div className={s.text}>
 				<h1 className={s.title}>Play on your mobile</h1>
-				<p className={s.subtitle}>@telegram_name</p>
+				<p className={s.subtitle}>@AKZYTestClickerBot</p>
 			</div>
 		</section>
 	);
