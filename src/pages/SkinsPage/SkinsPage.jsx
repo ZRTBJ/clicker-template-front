@@ -62,7 +62,8 @@ export default function SkinsPage() {
 			/>
 			<div className={s.cards}>
 				{SKINS.map((elem, index) => (
-					<div key={index} className={s.card}>
+					elem.id != 1 &&
+					(<div key={index} className={s.card}>
 						<div className={s.card__imageWrapper}>
 							<img src={elem.img} alt={elem.title} />
 						</div>
@@ -94,7 +95,7 @@ export default function SkinsPage() {
 								{elem.price}
 							</Button>
 						)}
-					</div>
+					</div>)
 				))}
 			</div>
 		</section>

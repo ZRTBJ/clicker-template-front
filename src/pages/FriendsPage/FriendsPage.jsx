@@ -15,7 +15,18 @@ export default function FriendsPage() {
 	const user = useSelector((state) => state.user);
 	const links = {
 		path: `https://t.me/AKZYTestClickerBot?start=${user.tgId}`,
-		text: 	`REFERRAL TEXT`,
+		text: 	`
+Hi! This bot was created by the @akzy_studio team .
+Attention! The bot is used for demonstration purposes only. 
+Our channel - @akzy_studio
+Contact manager - @AkzyStudioManager 
+
+
+Привет! Этот бот был создан командой @akzy_studio .
+Внимание! Бот используется исключительно в демонстрационных целях. 
+Наш канал - @akzy_studio
+Контакты менеджера - @AkzyStudioManager 		
+		`,
 	};
 	const { handleCopy, isCopied } = useCopy(links.path);
 	return (

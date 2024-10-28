@@ -1,4 +1,4 @@
-import { Outlet, useLocation, useParams } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
@@ -36,6 +36,8 @@ export default function Layout() {
 	const { pathname } = useLocation();
 	const {id} = useSelector(state=>state.user)
 	const dispatch = useDispatch();
+	const navigate = useNavigate();
+	const user = useSelector(state=>state.user)
 	const { isBuySkinModal, isConnectWalletModal, isTapBotModal } = useSelector(
 		(state) => state.modals
 	);
@@ -58,6 +60,12 @@ export default function Layout() {
 		}
 		return boughtSkins;
 	}
+
+	useEffect(()=>{
+		if (user.id == 0){
+			navigate('/')
+		}
+	})
 
 	useEffect(()=>{
 		if (id == 0 && !isAuthWasMade){
@@ -156,7 +164,7 @@ export default function Layout() {
 				break;
 
 			default:
-				setDeviceCheck(true);
+				setDeviceCheck(false);
 				return;
 		}
 	}, [platform]);

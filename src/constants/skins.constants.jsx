@@ -8,7 +8,7 @@ export const SKINS = [
 	{
 		id: 1,
 		img: SilverCoin,
-		title: 'Blue moon',
+		title: 'Silver coin',
 		titleForApi: 'bluemoon',
 		bonus: '30 per tap',
 		price: 99,
@@ -16,7 +16,7 @@ export const SKINS = [
 	{
 		id: 2,
 		img: GoldCoin,
-		title: 'Gold moon',
+		title: 'Gold coin',
 		titleForApi: 'goldmoon',
 		bonus: '70 per tap',
 		price: 249,
@@ -24,7 +24,7 @@ export const SKINS = [
 	{
 		id: 3,
 		img: PizzaCoin,
-		title: 'Pink moon',
+		title: 'Pizza coin',
 		titleForApi: 'pinkmoon',
 		bonus: '150 per tap',
 		price: 499,

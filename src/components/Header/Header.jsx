@@ -8,13 +8,13 @@ import s from './Header.module.scss';
 
 export default function Header() {
 	const dispatch = useDispatch();
-	const { nickname } = useSelector(state => state.user);
+	const { nickname, photoUrl } = useSelector(state => state.user);
 
 	return (
 		<header className={s.header}>
 			<div className={s.header__user}>
 				<div className={s.header__avatar}>
-					<img src={avatarImage} alt='avatar' />
+					<img src={photoUrl} alt='avatar' />
 				</div>
 				<span className={s.header__nickname}>{nickname}</span>
 			</div>

@@ -6,10 +6,11 @@ import RefillIcon from '../../assets/icons/RefillIcon';
 import SkinsIcon from '../../assets/icons/SkinsIcon';
 import GameCoin from '../../components/GameCoin/GameCoin';
 import RocketIcon from '../../assets/icons/RocketIcon';
-import { setBalance, setEnergy } from '../../store/slices/userSlice';
+import { setBalance, setEnergy, setRefillsMadeForDay } from '../../store/slices/userSlice';
 
 import s from './GamePage.module.scss';
 import { makeTaps } from '../../api/makeTap';
+import { refill_energy } from '../../api/refill_energy';
 
 export default function GamePage() {
 	const { energy, maxEnergy, multitap, balance, id, refills_made_for_day } = useSelector(
@@ -95,7 +96,7 @@ export default function GamePage() {
 	  }, [tapCount]);
 
 	  function formatNumber(num) {
-		return num.toLocaleString('de-DE'); // Используем 'de-DE' для разделителей точкой
+		return num.toLocaleString('en-US'); // Используем 'en-US' для разделителей точкой
 	  }
 
 

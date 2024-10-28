@@ -37,7 +37,7 @@ export default function SquadsPage() {
 		
 		createSquad('', id, squadToLeaveLink).then((json) => {
 			if (json) {
-				dispatch(setSquad(squadToLeaveId.id));
+				dispatch(setSquad(json.in_squad));
 				dispatch(setIsExitSquadModal(false));
 				dispatch(
 				setIsFinishSquadModal({
@@ -65,7 +65,7 @@ export default function SquadsPage() {
 		); */
 	};
 	function formatNumber(num) {
-		return num.toLocaleString('de-DE'); // Используем 'de-DE' для разделителей точкой
+		return num.toLocaleString('en-US'); // Используем 'en-US' для разделителей точкой
 	  }
 
 	return (

@@ -13,7 +13,7 @@ export default function LeaderPage() {
 		return usersLeaders.findIndex(user => user.id === targetId);
 	}
 	function formatNumber(num) {
-		return num.toLocaleString('de-DE'); // Используем 'de-DE' для разделителей точкой
+		return num.toLocaleString('en-US'); // Используем 'en-US' для разделителей точкой
 	  }
 
 	return (
