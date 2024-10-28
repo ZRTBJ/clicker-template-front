@@ -1,33 +1,82 @@
 .layout {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	gap: 32px;
-	width: 100%;
-	min-height: 100vh;
-	padding: 20px 16px 84px;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 32px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px 16px 84px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-	.main {
-		display: flex;
-		flex: 1;
+  .main {
+    display: flex;
+    flex: 1;
 
-		& > section {
-			flex: 1;
-		}
-	}
+    & > section {
+      flex: 1;
+    }
+  }
 
-	.bottomBlur {
-		position: fixed;
-		bottom: -170px;
-		left: -212px;
-		right: -212px;
-		height: 300px;
-		filter: blur(80px);
-		background: #0e0f0e;
-		transform: rotate(-180deg);
-		pointer-events: none;
-	}
+  .bottomBlur {
+    position: fixed;
+    bottom: -170px;
+    left: -212px;
+    right: -212px;
+    height: 300px;
+    filter: blur(80px);
+    background: #0e0f0e;
+    transform: rotate(-180deg);
+    pointer-events: none;
+  }
+
+  .splash {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    .title {
+      font-size: 60px;
+      font-weight: bold;
+      align-self: center;
+
+      .highlight {
+        color: #9eff00;
+      }
+    }
+
+    .subtitle {
+      font-size: 30px;
+      margin-bottom: 20px;
+      align-self: center;
+      margin-bottom: 50px;
+    }
+
+    .logo {
+      margin-left: 50px;
+      margin-right: 50px;
+      width: auto;
+      margin-bottom: 50px;
+    }
+
+    .list {
+      margin-bottom: 50px;
+    }
+
+    .playbtn {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: lightgray;
+      }
+    }
+  }
 }
