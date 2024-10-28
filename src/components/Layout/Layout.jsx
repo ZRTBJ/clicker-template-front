@@ -185,7 +185,18 @@ export default function Layout() {
     );
 
   if (!isDeviceCheck) {
-    return <Qr />;
+    return (
+      <div
+        className={s.layout}
+        style={{
+          backgroundImage: `url(${BGLIST[index]})`,
+          justifyContent: "center",
+        }}
+      >
+        <img src={Logo} style={{ width: "200px", alignSelf: "center" }}></img>
+        <Qr />
+      </div>
+    );
   }
 
   return (
