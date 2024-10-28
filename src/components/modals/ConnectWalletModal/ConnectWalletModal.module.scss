@@ -35,6 +35,9 @@
 		text-align: center;
 	}
 	.button {
-		text-transform: lowercase;
+
+		&:disabled {
+			background: rgba(255, 255, 255, 0.2);
+		}
 	}
 }
