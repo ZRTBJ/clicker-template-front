@@ -105,7 +105,7 @@ export default function BoostPage() {
                 }
               >
                 {elem.titleForApi == "tapbot" ? (
-                  <GoldStarIcon />
+                  <GoldStarIcon width={16} height={16} />
                 ) : (
                   <StarsIcon width={16} height={16} />
                 )}
