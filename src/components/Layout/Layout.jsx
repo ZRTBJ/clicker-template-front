@@ -184,20 +184,20 @@ export default function Layout() {
       </div>
     );
 
-  // if (!isDeviceCheck) {
-  //   return (
-  //     <div
-  //       className={s.layout}
-  //       style={{
-  //         backgroundImage: `url(${BGLIST[index]})`,
-  //         justifyContent: "center",
-  //       }}
-  //     >
-  //       <img src={Logo} style={{ width: "200px", alignSelf: "center" }}></img>
-  //       <Qr />
-  //     </div>
-  //   );
-  // }
+  if (!isDeviceCheck) {
+    return (
+      <div
+        className={s.layout}
+        style={{
+          backgroundImage: `url(${BGLIST[index]})`,
+          justifyContent: "center",
+        }}
+      >
+        <img src={Logo} style={{ width: "200px", alignSelf: "center" }}></img>
+        <Qr />
+      </div>
+    );
+  }
 
   return (
     <div
