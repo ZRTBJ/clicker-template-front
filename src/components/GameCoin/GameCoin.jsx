@@ -5,8 +5,11 @@ import { SKINIMG } from "../../constants/skins.constants";
 
 import s from "./GameCoin.module.scss";
 
-import HorseGif from "../../assets/images/giphy.gif";
-import HorseJPG from "../../assets/images/giphy.jpg";
+// import HorseGif from "../../assets/images/giphy.gif";
+// import HorseJPG from "../../assets/images/giphy.jpg";
+
+import HorseGif from "../../assets/images/abcd.gif";
+import HorseJPG from "../../assets/images/abc.jpg";
 
 import React, { useState, useRef } from "react";
 import classNames from "classnames";

@@ -31,7 +31,9 @@
     display: none;
   }
   .gif {
-    display: block;
+    max-height: 200px;
+    max-width: 200px;
+    margin: auto;
 
     cursor: pointer;
     &.paused {
