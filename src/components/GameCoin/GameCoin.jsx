@@ -42,7 +42,7 @@ export default function GameCoin({ handleClickCoin }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const timeoutRef = useRef(null);
   const handleGifClick1 = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     clearTimeout(timeoutRef.current);
     setIsPlaying(false);
     setTimeout(() => {
